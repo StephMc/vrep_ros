@@ -1313,6 +1313,7 @@ void ROS_server::streamAllData()
 					geometry_msgs::PoseStamped fl;
 					fl.header.seq=_simulationFrameID;
 					fl.header.stamp=inf.headerInfo.stamp;
+                    fl.header.frame_id = publishers[pubI].auxStr.c_str();
 					fl.pose.position.x=(double)val[0];
 					fl.pose.position.y=(double)val[1];
 					fl.pose.position.z=(double)val[2];
